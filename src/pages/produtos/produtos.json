@@ -1,0 +1,68 @@
+[
+    {
+        "nome": "Arroz",
+        "id": 0,
+        "valor": 0,
+        "categoria": 0
+    },
+    {
+        "nome": "Feijão",
+        "id": 1,
+        "valor": 0,
+        "categoria": 0
+    },
+    {
+        "nome": "Macarrão",
+        "id": 2,
+        "valor": 0,
+        "categoria": 0
+    },
+    {
+        "nome": "Pure de Batata",
+        "id": 3,
+        "valor": 0,
+        "categoria": 0
+    },
+    {
+        "nome": "Bife Bovino",
+        "id": 4,
+        "valor": 0,
+        "categoria": 1
+    },
+    {
+        "nome": "Filé de Frango Grelhado",
+        "id": 5,
+        "valor": 0,
+        "categoria": 1
+    },
+    {
+        "nome": "Frango Xadrez",
+        "id": 6,
+        "valor": 0,
+        "categoria": 1
+    },
+    {
+        "nome": "Carne de Panela",
+        "id": 7,
+        "valor": 0,
+        "categoria": 1
+    },
+    {
+        "nome": "Alface",
+        "id": 8,
+        "valor": 0,
+        "categoria": 2
+    },
+    {
+        "nome": "Tomate",
+        "id": 9,
+        "valor": 0,
+        "categoria": 2
+    },
+    {
+        "nome": "Salada de Cebola",
+        "id": 10,
+        "valor": 0,
+        "categoria": 2
+    }
+]
