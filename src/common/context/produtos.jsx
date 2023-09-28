@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 
 export const ProdutosContext = createContext();
@@ -12,6 +13,7 @@ export const ProdutosProvider = ({ children }) => {
     const [totalDoPedido, setTotalDoPedido] = useState(0)
     const [tamanhoSelecionado, setTamanhoSelecionado] = useState(0)
     const [travaCarnes, setTravaCarnes] = useState()
+    const navigate = useNavigate();
     
     useEffect(() => {
 
@@ -46,7 +48,9 @@ export const ProdutosProvider = ({ children }) => {
             setTamanhoSelecionado,
             aoClicarTamanho,
             travaCarnes,
-            setTravaCarnes
+            setTravaCarnes,
+            mostrarAlertaTamanho,
+            mostraAlertaProdutos
         }} >
             {children}
         </ProdutosContext.Provider>
@@ -88,5 +92,24 @@ export const ProdutosProvider = ({ children }) => {
         setTamanhoSelecionado(valor)
     }
     
+    function mostrarAlertaTamanho() {
+        return !tamanhoSelecionado ? window.alert("Selecione primeiro o tamanho da marmita!") : navigate("/produtos")
+    }
+
+    function mostraAlertaProdutos() {
+        
+        if (produtosSelecionados.length !== 0) {
+            let alert = window.confirm("Você tem certeza que deseja finalizar seu pedido?")
+            if (alert) {
+                if (travaCarnes > 2) {
+                    window.alert("Você selecionou mais de 2 carnes. Favor revisar seu pedido!")
+                } else {
+                    navigate("/carrinho")
+                }
+            }
+        } else {
+            window.alert("Monte sua Marmita antes de continuar!")
+        }
+    }
 
 }

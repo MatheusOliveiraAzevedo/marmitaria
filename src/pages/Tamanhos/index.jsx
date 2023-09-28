@@ -2,13 +2,11 @@ import React, { useContext } from 'react'
 import { CardapioContext } from '../../common/context/listaCardapio'
 import { ContainerLabelTamanho, ContainerSectionTamanho, EtiquetaTexto, InputTamanho, SomaTotal } from './styles';
 import { ProdutosContext } from '../../common/context/produtos';
-import { useNavigate } from 'react-router-dom';
 
 
 const Tamanhos = () => {
     const { tamanhos } = useContext(CardapioContext);
-    const { valorMonetario, aoClicar, clickBotao, aoClicarTamanho, totalDoPedido } = useContext(ProdutosContext);
-    const navigate = useNavigate();
+    const { valorMonetario, aoClicar, clickBotao, aoClicarTamanho, totalDoPedido, mostrarAlertaTamanho } = useContext(ProdutosContext);
    
 
     return (
@@ -24,8 +22,7 @@ const Tamanhos = () => {
                 </ContainerLabelTamanho>
             ))}
             <button
-                onClick={() => {navigate("/produtos"), aoClicar()}}
-                disabled={totalDoPedido === 0}
+                onClick={() => {mostrarAlertaTamanho()}}
             >
                 CONTINUAR
             </button>

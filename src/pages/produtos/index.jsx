@@ -11,7 +11,7 @@ import SomaTotal from '../../componentes/SomaTotal'
 
 const Produtos = () => {
 
-    const { produtosSelecionados, setBebidasSelecionadas, setItensDaMarmita, totalDoPedido, valorMonetario, travaCarnes } = useContext(ProdutosContext);
+    const { produtosSelecionados, setBebidasSelecionadas, setItensDaMarmita, totalDoPedido, valorMonetario, travaCarnes, mostraAlertaProdutos } = useContext(ProdutosContext);
     const { listaMenuSelecionada } = useContext(CardapioContext);
     const navigate = useNavigate()
 
@@ -40,8 +40,8 @@ const Produtos = () => {
                 <button>
                     <RiArrowGoBackLine className='iconClose' size={30} onClick={() => navigate(-1)} />
                 </button>
-                <button disabled={travaCarnes <= 2 ? false : true}>
-                    <AiOutlineArrowRight className='iconClose' size={30} onClick={() => navigate("/carrinho")} />
+                <button>
+                    <AiOutlineArrowRight className='iconClose' size={30} onClick={() => mostraAlertaProdutos()} />
                 </button>
             </Botoes>
         </ContainerPagina>
