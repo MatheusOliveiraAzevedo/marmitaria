@@ -17,7 +17,6 @@ export const ProdutosProvider = ({ children }) => {
     
     useEffect(() => {
 
-
         setTotalDoPedido(produtosSelecionados.reduce((soma, selecao) => {
             return Number(soma) + selecao.valor;
         }, Number(tamanhoSelecionado)))
@@ -25,7 +24,6 @@ export const ProdutosProvider = ({ children }) => {
         setTravaCarnes(produtosSelecionados.reduce((soma, selecao) => {
             return selecao.categoria === 1 && soma + 1
         }, 0))
-
         
       }, [produtosSelecionados, setTotalDoPedido, tamanhoSelecionado, setTravaCarnes])
     
@@ -79,10 +77,8 @@ export const ProdutosProvider = ({ children }) => {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2,
         });
-
         return valorFormatado
     }
-
 
     function aoClicar () {
         setClickBotao(!clickBotao)
@@ -97,7 +93,6 @@ export const ProdutosProvider = ({ children }) => {
     }
 
     function mostraAlertaProdutos() {
-        
         if (produtosSelecionados.length !== 0) {
             let alert = window.confirm("Você tem certeza que deseja finalizar seu pedido?")
             if (alert) {
@@ -111,5 +106,4 @@ export const ProdutosProvider = ({ children }) => {
             window.alert("Monte sua Marmita antes de continuar!")
         }
     }
-
 }

@@ -1,13 +1,12 @@
 import React, { useContext } from 'react'
 import { CardapioContext } from '../../common/context/listaCardapio'
-import { ContainerLabelTamanho, ContainerSectionTamanho, EtiquetaTexto, InputTamanho, SomaTotal } from './styles';
+import { ContainerLabelTamanho, ContainerSectionTamanho, EtiquetaTexto, InputTamanho } from './styles';
 import { ProdutosContext } from '../../common/context/produtos';
 
 
 const Tamanhos = () => {
     const { tamanhos } = useContext(CardapioContext);
-    const { valorMonetario, aoClicar, clickBotao, aoClicarTamanho, totalDoPedido, mostrarAlertaTamanho } = useContext(ProdutosContext);
-   
+    const { valorMonetario, aoClicarTamanho, mostrarAlertaTamanho } = useContext(ProdutosContext);
 
     return (
         <ContainerSectionTamanho>
@@ -16,13 +15,20 @@ const Tamanhos = () => {
             {tamanhos.map((item, index) => (
                 <ContainerLabelTamanho key={item.id} htmlFor={`tamanho${index}`}>
                     <div>
-                        <InputTamanho type="radio" value={item.valor} name='tamanho' id={`tamanho${index}`} onChange={(event) => {aoClicarTamanho(event.target.value)}}/> {item.nome}
+                        <InputTamanho
+                            type="radio"
+                            value={item.valor}
+                            name='tamanho'
+                            id={`tamanho${index}`}
+                            onChange={(event) => { aoClicarTamanho(event.target.value) }}
+                        />
+                        {item.nome}
                     </div>
                     <span>{valorMonetario(item.valor)}</span>
                 </ContainerLabelTamanho>
             ))}
             <button
-                onClick={() => {mostrarAlertaTamanho()}}
+                onClick={() => { mostrarAlertaTamanho() }}
             >
                 CONTINUAR
             </button>

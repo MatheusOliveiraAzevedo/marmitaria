@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const ContainerOpcoes = styled.div`
     width: 100vw;
     display: flex;
@@ -13,7 +12,6 @@ export const ContainerOpcoes = styled.div`
     transition: 500ms all;
     gap: 5px;
     margin-bottom: 30px;
-    /* box-shadow: 10px 10px 50px; */
     @media screen and (min-width: 700px) {
         flex-direction: column;
         width: auto;
@@ -26,7 +24,6 @@ export const ContainerOpcoes = styled.div`
         margin: 0;
     }
 `
-
 export const BotaoVoltar = styled.button`
     align-self: center;
     background-color: #c3b6a3;
@@ -37,6 +34,7 @@ export const BotaoVoltar = styled.button`
     justify-content: center;
     align-items: center;
     width: 50%;
+
     .iconClose{
         position: relative;
         padding: 5px;

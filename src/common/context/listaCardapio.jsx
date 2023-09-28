@@ -2,7 +2,6 @@ import { createContext, useState } from "react";
 
 export const CardapioContext = createContext();
 
-
 export const ListaCardapioProvider = ({ children }) => {
     const [listaCardapio, setListaCardapio] = useState([
         {
@@ -155,6 +154,7 @@ export const ListaCardapioProvider = ({ children }) => {
             "id": 3
         }
     ])
+
     const [tamanhos, setTamanhos] = useState([
         {
             "nome": "MUITO GRANGE",
@@ -180,8 +180,6 @@ export const ListaCardapioProvider = ({ children }) => {
 
     const [categoriaSelecionada, setCategoriaSelecionada] = useState(0);
     const listaMenuSelecionada = listaCardapio.filter(produto => produto.categoria === categoriaSelecionada);
-    const [exibeMenu, setExibeMenu] = useState(false);
-    
 
     return (
         <CardapioContext.Provider value={{
@@ -192,8 +190,6 @@ export const ListaCardapioProvider = ({ children }) => {
             setCategoriaSelecionada,
             listaMenuSelecionada, 
             categoriaMenu,
-            exibeMenu,
-            setExibeMenu,
             AlteraBordaMenu,
             tamanhos,
             setTamanhos
@@ -203,7 +199,6 @@ export const ListaCardapioProvider = ({ children }) => {
     )
 
     function AlteraBorda(id) {
-
 
         listaCardapio.map(item => {
             if (!item.selecao) {
@@ -215,20 +210,13 @@ export const ListaCardapioProvider = ({ children }) => {
     }
     function AlteraBordaMenu(id) {
 
-     
-
         categoriaMenu.map(item => {
             if (!item.selecao) {
                 item.id === id ? item.selecao = true : ""
-                // setExibeMenu(false)
             } else {
                 item.id !== id ? item.selecao = false : ""
             }
         })
     }
-
-
-
-    
 }
 

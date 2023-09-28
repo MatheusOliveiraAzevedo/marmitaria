@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-import styled from 'styled-components'
 import { ProdutosContext } from '../../common/context/produtos'
 import { CardapioContext } from '../../common/context/listaCardapio'
 import { ContainerProduto, ItensProdutos, LabelProduto } from './styles'
@@ -8,8 +7,6 @@ import { ContainerProduto, ItensProdutos, LabelProduto } from './styles'
 const Produto = ({ produto, index, borda }) => {
     const { AlteraBorda } = useContext(CardapioContext)
     const { listaItensMarmita, valorMonetario } = useContext(ProdutosContext);
-
-
 
     return (
         <>

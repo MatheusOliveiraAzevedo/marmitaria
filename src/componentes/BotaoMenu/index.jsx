@@ -8,7 +8,12 @@ const BotaoMenu = ({ categoria, borda = false }) => {
     const { setCategoriaSelecionada, AlteraBordaMenu } = useContext(CardapioContext)
 
     return (
-        <Botao $borda={borda} onClick={() => { setCategoriaSelecionada(categoria.id), AlteraBordaMenu(categoria.id) }}>{categoria.nome}</Botao>
+        <Botao
+            $borda={borda}
+            onClick={() => { setCategoriaSelecionada(categoria.id), AlteraBordaMenu(categoria.id) }}
+        >
+            {categoria.nome}
+        </Botao>
     )
 }
 

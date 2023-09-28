@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const ContainerSectionTamanho = styled.section`
     display: flex;
     flex-direction: column;
@@ -21,7 +20,6 @@ export const ContainerSectionTamanho = styled.section`
         border-radius: 10px;
         margin-bottom: 30px;
     }
-    
     @media screen and (min-width: 700px) {
         
         button {
@@ -35,7 +33,6 @@ export const ContainerSectionTamanho = styled.section`
         }
     }
 `
-
 export const SomaTotal = styled.span`
     align-self: flex-end;
     margin-right: 40px;
@@ -61,7 +58,6 @@ export const ContainerLabelTamanho = styled.label`
 export const InputTamanho = styled.input`
     
 `
-
 export const EtiquetaTexto = styled.span`
     align-self: center;
     width: 80%;

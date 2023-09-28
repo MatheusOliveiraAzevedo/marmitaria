@@ -10,7 +10,11 @@ const Menu = () => {
     return (
         <ContainerOpcoes>
             {categoriaMenu.map((categoria) => (
-                <BotaoMenu key={categoria.id} categoria={categoria} borda={categoria.selecao} />
+                <BotaoMenu
+                    key={categoria.id}
+                    categoria={categoria}
+                    borda={categoria.selecao}
+                />
             ))}
         </ContainerOpcoes>
     )

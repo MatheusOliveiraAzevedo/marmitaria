@@ -26,7 +26,10 @@ const CarrinhoMarmita = () => {
             </ListaItensSelecionados>
             <Botoes>
                 <BotaoVoltar>
-                    <RiArrowGoBackLine className='iconClose' size={30} onClick={() => navigate(-1)} />
+                    <RiArrowGoBackLine
+                        className='iconClose'
+                        size={30} onClick={() => navigate(-1)}
+                    />
                 </BotaoVoltar>
                 <Finalizar>Finalizar Compra</Finalizar>
             </Botoes>

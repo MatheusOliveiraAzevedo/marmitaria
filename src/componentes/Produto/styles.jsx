@@ -1,12 +1,10 @@
 import styled from "styled-components"
 
-
 export const ListaProdutos = styled.ul`
     display: flex;
     flex-direction: column;
     padding: 0;
 `
-
 export const ItensProdutos = styled.li`
     margin: 10px;
     padding: 5px;
@@ -28,7 +26,6 @@ export const ContainerProduto = styled.div`
             display: none;
         }
 `
-
 export const LabelProduto = styled.label`
     width: 100%;
     display: flex;

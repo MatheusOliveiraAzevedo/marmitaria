@@ -1,6 +1,5 @@
 import styled from "styled-components"
 
-
 export const ContainerPagina = styled.section`
     display: flex;
     flex-direction: column;
@@ -19,7 +18,6 @@ export const ContainerPagina = styled.section`
         justify-items: center;
     }
 `
-
 export const Botoes = styled.div`
     display: flex;
     justify-content: space-between;
@@ -46,8 +44,6 @@ export const Botoes = styled.div`
         grid-column: 2;
     }
 `
-
-
 export const ContainerProdutos = styled.section`
     display: flex;
     flex-direction: column;
@@ -56,12 +52,8 @@ export const ContainerProdutos = styled.section`
     width: 100vw;
     @media screen and (min-width: 700px) {
         width: auto;
-    
     }
-    `
-
-
-
+`
 export const SomaTotal = styled.span`
     align-self: flex-end;
     margin-right: 40px;
@@ -70,7 +62,6 @@ export const SomaTotal = styled.span`
     font-size: 20px;
     font-weight: 500;
 `
-
 export const EtiquetaTexto = styled.span`
     align-self: center;
     width: 80%;
@@ -78,20 +69,13 @@ export const EtiquetaTexto = styled.span`
     text-align: center;
     margin: 15px 0;
 `
-
-
 export const ContainerItensSelecionados = styled.section`
-
 `
-
-
-
 export const ListaProdutos = styled.ul`
     display: flex;
     flex-direction: column;
     padding: 0;
 `
-
 export const ItensProdutos = styled.li`
     display: flex;
     justify-content: space-between;

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Produtos from './pages/produtos'
 import { ProdutosProvider } from './common/context/produtos'
 import { ListaCardapioProvider } from './common/context/listaCardapio'
@@ -8,11 +8,7 @@ import Inicio from './pages/Inicio'
 import CarrinhoMarmita from './pages/CarrinhoMarmita'
 
 function AppRouter() {
-
-  const location = useLocation()
-
   return (
-
     <ProdutosProvider>
       <EstilosGlobais />
       <ListaCardapioProvider>
@@ -25,7 +21,6 @@ function AppRouter() {
         </Routes>
       </ListaCardapioProvider>
     </ProdutosProvider>
-
   )
 }
 
